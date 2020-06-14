@@ -1,26 +1,39 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         // write your code here
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int busHeight = scanner.nextInt();
-        scanner.nextInt();
-        int bridgeHeight = scanner.nextInt();
-        int crashCount = 0;
+        int height = 0;
+        int n = 0;
+        int bridge = 0;
+        boolean crash = false;
 
-        while (scanner.hasNextInt()) {
-            if (busHeight >= bridgeHeight) {
-                crashCount++;
-            }
-            if (scanner.hasNextInt())
-                bridgeHeight = scanner.nextInt();
+        if (sc.hasNextInt()) {
+            height = sc.nextInt();
         }
-        if (crashCount != 0) {
-            System.out.println("Will crash on bridge " + crashCount);
-        } else {
-            System.out.println("Will not crash");
+
+        if (sc.hasNextInt()) {
+            n = sc.nextInt();
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (sc.hasNextInt()) {
+                bridge = sc.nextInt();
+            }
+            if (bridge <= height) {
+                i++;
+                System.out.print("Will crash on bridge " + i);
+                crash = true;
+                break;
+            }
+        }
+
+        if (!crash) {
+            System.out.print("Will not crash");
         }
     }
 }
+
