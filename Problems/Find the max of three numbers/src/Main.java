@@ -5,7 +5,6 @@ public class Main {
     public static int getNumberOfMaxParam(int a, int b, int c) {
         // write a body here
         int wyniki = Math.max(a, Math.max(b, c));
-
         if (a == wyniki) {
             return 1;
         } else if (b == wyniki) {

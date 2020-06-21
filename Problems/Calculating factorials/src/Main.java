@@ -5,7 +5,6 @@ public class Main {
     public static long factorial(long n) {
         // write your code here
         long ans = 1L;
-
         if (n == 0L) {
             return ans;
         } else {

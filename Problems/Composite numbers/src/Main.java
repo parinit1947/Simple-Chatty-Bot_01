@@ -4,12 +4,13 @@ public class Main {
 
     public static boolean isComposite(long number) {
         // write your code here
-        for (int i = 2; i < (int) Math.sqrt(number) + 1; i++) {
+        int count = 0;
+        for (int i = 1; i <= number; i++) {
             if (number % i == 0) {
-                return true;
+                count++;
             }
         }
-        return false;
+        return count > 2;
     }
 
     /* Do not change code below */

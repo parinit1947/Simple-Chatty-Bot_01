@@ -6,13 +6,11 @@ public class Main {
         // write your code here
         char[] vowel = {'a', 'e', 'i', 'o', 'u'};
         ch = Character.toLowerCase(ch);
-
         for (int i = 0; i < vowel.length; i++) {
             if (ch == vowel[i]) {
                 return true;
             }
         }
-
         return false;
     }
 
